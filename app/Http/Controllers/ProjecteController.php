@@ -61,7 +61,9 @@ class ProjecteController extends Controller
      */
     public function edit(Projecte $projecte)
     {
-        //
+        return view('projectes_edit', [
+            'projecte' => $projecte,
+        ]);
     }
 
     /**
@@ -73,7 +75,8 @@ class ProjecteController extends Controller
      */
     public function update(Request $request, Projecte $projecte)
     {
-        //
+        $projecte->update($request->all());
+        return redirect('/projecte');
     }
 
     /**

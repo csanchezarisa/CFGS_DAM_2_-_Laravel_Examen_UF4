@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Crear un projecte')
+@section('title', 'Crear una tasca')
 
 @section('header')
     <h1>Crear una nova tasca</h1>
