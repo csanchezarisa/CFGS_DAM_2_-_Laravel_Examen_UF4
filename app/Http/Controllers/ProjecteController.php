@@ -15,7 +15,9 @@ class ProjecteController extends Controller
     public function index()
     {
         $projectes = Projecte::all();
-        return \view('projecte.list')->with($projectes);
+        return view('projectes_index', [
+            'projectes' => $projectes,
+        ]);
     }
 
     /**

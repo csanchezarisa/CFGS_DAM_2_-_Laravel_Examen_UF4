@@ -15,10 +15,10 @@
         </thead>
         <tbody>
             @foreach ($projectes as $projecte)
-                
-            <td>{{ $projecte->id }}</td>
-            <td>{{ $projecte->name }}</td>
-
+                <tr>
+                    <td>{{ $projecte->id }}</td>
+                    <td>{{ $projecte->name }}</td>
+                </tr>
             @endforeach
         </tbody>
     </table>

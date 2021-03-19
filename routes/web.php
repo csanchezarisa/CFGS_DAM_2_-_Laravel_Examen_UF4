@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/projecte', App\Http\Controllers\ProjecteController::class);
+
+Route::resource('tasca', App\Http\Controllers\TascaController::class);
