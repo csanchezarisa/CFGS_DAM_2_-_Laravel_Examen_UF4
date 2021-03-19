@@ -15,6 +15,7 @@
             <th>Completada</th>
             <th>Descripció</th>
             <th>Nom del projecte</th>
+            <th></th>
         </thead>
         <tbody>
             @foreach ($tasques as $tasca)
@@ -30,6 +31,7 @@
                     </td>
                     <td>{{ $tasca->description }}</td>
                     <td>{{ $tasca->projecte->name }}</td>
+                    <td><a href="/tasca/{{ $tasca->id }}" class="btn btn-primary">Mostrar tasca</a></td>
                 </tr>
             @endforeach
         </tbody>

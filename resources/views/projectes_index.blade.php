@@ -13,6 +13,7 @@
             <th>ID</th>
             <th>Nom projecte</th>
             <th>Número de tasques assignades</th>
+            <th></th>
         </thead>
         <tbody>
             @foreach ($projectes as $projecte)
@@ -20,6 +21,7 @@
                     <td>{{ $projecte->id }}</td>
                     <td>{{ $projecte->name }}</td>
                     <td>{{ $projecte->tasca->count() }}</td>
+                    <td><a href="/projecte/{{ $projecte->id }}" class="btn btn-primary">Mostrar projecte</a></td>
                 </tr>
             @endforeach
         </tbody>
