@@ -105,6 +105,7 @@ class TascaController extends Controller
      */
     public function destroy(Tasca $tasca)
     {
-        //
+        $tasca->delete();
+        return redirect('/tasca');
     }
 }

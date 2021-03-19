@@ -49,4 +49,12 @@
         <button type="reset" class="btn btn-danger">Reiniciar formulari</button>
     </form>
 
+    <form action="/tasca/{{ $tasca->id }}" method="post">
+    
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+    </form>
+
 @endsection
