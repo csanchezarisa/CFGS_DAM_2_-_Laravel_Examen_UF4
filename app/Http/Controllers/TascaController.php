@@ -71,7 +71,11 @@ class TascaController extends Controller
      */
     public function edit(Tasca $tasca)
     {
-        //
+        $projectes = Projecte::all();
+        return view('tasques_edit', [
+            'tasca' => $tasca,
+            'projectes' => $projectes,
+        ]);
     }
 
     /**
@@ -83,7 +87,14 @@ class TascaController extends Controller
      */
     public function update(Request $request, Tasca $tasca)
     {
-        //
+        if($request['completed']) {
+            $request['completed'] = 1;
+        }
+        else {
+            $request['completed'] = 0;
+        }
+        $tasca->update($request->all());
+        return redirect('/tasca');
     }
 
     /**
