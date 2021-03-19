@@ -1,9 +1,9 @@
 @extends('layout.master')
 
-@section('title', 'Llistat de projectes')
+@section('title', 'Llistat de tasques')
 
 @section('header')
-    <h1>Llistat de projectes registrats</h1>
+    <h1>Llistat de tasques registrades</h1>
 @endsection
 
 @section('content')
