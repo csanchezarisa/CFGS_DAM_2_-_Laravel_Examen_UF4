@@ -14,7 +14,10 @@ class TascaController extends Controller
      */
     public function index()
     {
-        //
+        $tasques = Tasca::all();
+        return view('tasques_index', [
+            'tasques' => $tasques,
+        ]);
     }
 
     /**

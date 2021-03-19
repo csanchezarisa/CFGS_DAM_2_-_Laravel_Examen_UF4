@@ -12,12 +12,14 @@
         <thead>
             <th>ID</th>
             <th>Nom projecte</th>
+            <th>Número de tasques assignades</th>
         </thead>
         <tbody>
             @foreach ($projectes as $projecte)
                 <tr>
                     <td>{{ $projecte->id }}</td>
                     <td>{{ $projecte->name }}</td>
+                    <td>{{ $projecte->tasca->count() }}</td>
                 </tr>
             @endforeach
         </tbody>
