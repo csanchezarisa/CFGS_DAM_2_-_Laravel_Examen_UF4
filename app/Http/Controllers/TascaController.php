@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tasca;
+use App\Models\Projecte;
 use Illuminate\Http\Request;
 
 class TascaController extends Controller
@@ -27,7 +28,10 @@ class TascaController extends Controller
      */
     public function create()
     {
-        //
+        $projectes = Projecte::all();
+        return view('tasques_create', [
+            'projectes' => $projectes,
+        ]);
     }
 
     /**
@@ -38,7 +42,14 @@ class TascaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request['completed']) {
+            $request['completed'] = 1;
+        }
+        else {
+            $request['completed'] = 0;
+        }
+        $tasca = Tasca::create($request->all());
+        return redirect('/tasca');
     }
 
     /**
