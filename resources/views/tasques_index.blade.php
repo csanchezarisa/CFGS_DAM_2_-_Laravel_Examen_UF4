@@ -30,7 +30,7 @@
                         @endif
                     </td>
                     <td>{{ $tasca->description }}</td>
-                    <td>{{ $tasca->projecte->name }}</td>
+                    <td><a href="/projecte/{{ $tasca->projecte->id }}">{{ $tasca->projecte->name }}</a></td>
                     <td><a href="/tasca/{{ $tasca->id }}" class="btn btn-primary">Mostrar tasca</a></td>
                 </tr>
             @endforeach
