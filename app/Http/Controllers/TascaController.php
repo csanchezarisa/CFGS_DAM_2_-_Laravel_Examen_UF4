@@ -60,7 +60,9 @@ class TascaController extends Controller
      */
     public function show(Tasca $tasca)
     {
-        //
+        return view('tasques_show', [
+            'tasca' => $tasca,
+        ]);
     }
 
     /**

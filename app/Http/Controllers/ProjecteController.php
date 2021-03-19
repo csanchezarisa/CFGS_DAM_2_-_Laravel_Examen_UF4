@@ -50,7 +50,9 @@ class ProjecteController extends Controller
      */
     public function show(Projecte $projecte)
     {
-        //
+        return view('projectes_show', [
+            'projecte' => $projecte,
+        ]);
     }
 
     /**
