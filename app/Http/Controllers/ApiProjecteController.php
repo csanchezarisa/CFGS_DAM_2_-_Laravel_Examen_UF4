@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Projecte;
 use Illuminate\Http\Request;
 
 class ApiProjecteController extends Controller
@@ -13,7 +14,8 @@ class ApiProjecteController extends Controller
      */
     public function index()
     {
-        //
+        $projectes = Projecte::all();
+        return response()->json($projectes);
     }
 
     /**
@@ -45,7 +47,8 @@ class ApiProjecteController extends Controller
      */
     public function show($id)
     {
-        //
+        $projecte = Projecte::find($id);
+        return response()->json($projecte);
     }
 
     /**
